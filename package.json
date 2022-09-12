@@ -3,5 +3,10 @@
     "cheerio": "^1.0.0-rc.12",
     "express": "^4.18.1",
     "got": "^9.6.0"
+  },
+
+  "scripts": {
+    "setup": "npm install",
+    "dev": "node index.js"
   }
 }

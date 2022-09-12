@@ -14,9 +14,16 @@ https://cemc2.math.uwaterloo.ca/contest/PSG/school/print.php?f=web&h=y&t=&ids=p$
 
   const response = await got(reqstr, { json: false });
   const $ = cheerio.load(response.body);
+  $('title').remove();
 
+  let parsed = $("head").html()+$(".problem").html()
+
+  const $$ = cheerio.load(parsed);
+
+        
+  // console.log($$.html())
   // console.log($("head").html()+$(".problem").html());
-  qres.send($("head").html()+$(".problem").html())
+  qres.send($$.html())
   // qres.send($(".problem").html())
 });
 
