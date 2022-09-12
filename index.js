@@ -15,7 +15,7 @@ https://cemc2.math.uwaterloo.ca/contest/PSG/school/print.php?f=web&h=y&t=&ids=p$
   const response = await got(reqstr, { json: false });
   const $ = cheerio.load(response.body);
 
-  console.log($("head").html()+$(".problem").html());
+  // console.log($("head").html()+$(".problem").html());
   qres.send($("head").html()+$(".problem").html())
   // qres.send($(".problem").html())
 });
