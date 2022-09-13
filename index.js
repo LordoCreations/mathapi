@@ -7,7 +7,7 @@ const cors = require("cors");
 
 const express = require("express");
 const app = express();
-const port = 3000;
+const port = 8000;
 
 app.use(cors({ origin: process.env.REMOTE_CLIENT_APP, credentials: true }));
 
@@ -23,11 +23,11 @@ https://cemc2.math.uwaterloo.ca/contest/PSG/school/print.php?f=web&h=y&t=&ids=p$
   const $ = cheerio.load(response.body);
   $('title').remove();
 
-  let parsed = $("head").html()+$(".problem").html()
+  let parsed = $("head").html() + $(".problem").html()
 
   const $$ = cheerio.load(parsed);
 
-        
+
   // console.log($$.html())
   // console.log($("head").html()+$(".problem").html());
   qres.send($$.html())
