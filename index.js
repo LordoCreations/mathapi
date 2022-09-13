@@ -1,15 +1,15 @@
-require("dotenv").config();
+// require("dotenv").config();
 
 const cheerio = require("cheerio");
 
 const got = require("got");
-const cors = require("cors");
+// const cors = require("cors");
 
 const express = require("express");
 const app = express();
 const port = 3000;
 
-app.use(cors({ origin: process.env.REMOTE_CLIENT_APP, credentials: true }));
+// app.use(cors({ origin: process.env.REMOTE_CLIENT_APP, credentials: true }));
 
 
 app.get("/", async (reque, qres) => {
